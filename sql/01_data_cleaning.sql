@@ -10,8 +10,7 @@ GROUP BY Country, Year, CONCAT(Country, Year)
 HAVING COUNT(CONCAT(Country, Year)) > 1
 ; 
 
--- Assign row numbers to duplicate Country and Year combinations.
--- to identify which duplicate records should be removed.
+-- Assign row numbers to duplicate Country and Year combinations to identify which duplicate records should be removed.
 SELECT * 
 FROM (
 	SELECT Row_ID, 
